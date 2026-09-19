@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/skillswap/',
+  // GitHub Pages serves this repository below /skillswap/; Vercel serves it at the domain root.
+  base: process.env.GITHUB_ACTIONS ? '/skillswap/' : '/',
   plugins: [react()],
 })
