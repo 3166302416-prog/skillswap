@@ -42,7 +42,10 @@ function App() {
     {myCard && <section className="my-card-section" aria-live="polite"><div><p className="eyebrow">已发布</p><h2>这是你的技能名片</h2></div><SkillCardView card={myCard} featured /></section>}
     {matches.length > 0 && <section className="match-banner" aria-live="polite"><span className="match-icon">✦</span><div><strong>双向技能匹配成功</strong><p>你和 {matches.map((card) => card.name).join('、')} 可以互相学习，去技能广场看看吧。</p></div></section>}
     <section className="square-section" id="square"><div className="square-heading"><div><p className="eyebrow">02 / 技能广场</p><h2>遇见你的交换搭子</h2></div><p>已有 {cards.length} 张技能名片</p></div><div className="cards-grid">{cards.map((card) => <SkillCardView card={card} key={card.id} />)}</div></section>
-    <footer>SkillSwap · Teach what you know. Learn what you love.</footer>
+    <footer>
+      <span>SkillSwap · Teach what you know. Learn what you love.</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026126857号</a>
+    </footer>
   </main>
 }
 
