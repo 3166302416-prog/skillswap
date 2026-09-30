@@ -44,7 +44,11 @@ function App() {
     <section className="square-section" id="square"><div className="square-heading"><div><p className="eyebrow">02 / 技能广场</p><h2>遇见你的交换搭子</h2></div><p>已有 {cards.length} 张技能名片</p></div><div className="cards-grid">{cards.map((card) => <SkillCardView card={card} key={card.id} />)}</div></section>
     <footer>
       <span>SkillSwap · Teach what you know. Learn what you love.</span>
-      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026126857号</a>
+      <span className="footer-filing">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026126857号</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:lenhe13@foxmail.com">举报邮箱：lenhe13@foxmail.com</a>
+      </span>
     </footer>
   </main>
 }
